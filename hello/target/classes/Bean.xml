@@ -6,6 +6,10 @@
     default-init-method="init"
     default-destroy-method="destroy">
     
-    <bean id="helloWorld" class="com.tutorial.spring.hello.HelloWorld" scope="prototype"></bean>
+    <bean id="textEditor" class="com.tutorial.spring.hello.TextEditor">
+    	<property name="spellChecker">
+    		<bean id="spellChecker" class="com.tutorial.spring.hello.SpellChecker"/>
+    	</property>
+    </bean>
     
  </beans>   

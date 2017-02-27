@@ -13,11 +13,8 @@ public class MainApp
     {
     	AbstractApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
     	
-    	HelloWorld helloOne = (HelloWorld)context.getBean("helloWorld");
-    	helloOne.setMensajeUno("Hello World Pablo Paz Tellez");
-    	System.out.println("Mensaje Uno: "+helloOne.getMensajeUno());
-    	HelloWorld helloDos = (HelloWorld)context.getBean("helloWorld");
-    	System.out.println("Mensaje Dos: "+helloDos.getMensajeUno());
+    	TextEditor textEditor = (TextEditor)context.getBean("textEditor");
+    	textEditor.spellCheck();
     	
     	context.registerShutdownHook();
     	
