@@ -12,8 +12,14 @@ public class MainApp
     public static void main( String[] args )
     {
     	AbstractApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
+    	
     	HelloWorld helloOne = (HelloWorld)context.getBean("helloWorld");
-    	context.registerShutdownHook();
+    	helloOne.setMensajeUno("Hello World Pablo Paz Tellez");
     	System.out.println("Mensaje Uno: "+helloOne.getMensajeUno());
+    	HelloWorld helloDos = (HelloWorld)context.getBean("helloWorld");
+    	System.out.println("Mensaje Dos: "+helloDos.getMensajeUno());
+    	
+    	context.registerShutdownHook();
+    	
     }
 }

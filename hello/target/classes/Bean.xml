@@ -6,8 +6,6 @@
     default-init-method="init"
     default-destroy-method="destroy">
     
-    <bean id="helloWorld" class="com.tutorial.spring.hello.HelloWorld">
-    	<property name="mensajeUno" value="Hello World Eduardo Paz"></property>
-    </bean>
+    <bean id="helloWorld" class="com.tutorial.spring.hello.HelloWorld" scope="prototype"></bean>
     
  </beans>   
