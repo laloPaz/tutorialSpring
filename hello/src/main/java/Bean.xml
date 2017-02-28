@@ -6,10 +6,47 @@
     default-init-method="init"
     default-destroy-method="destroy">
     
-    <bean id="textEditor" class="com.tutorial.spring.hello.TextEditor">
-    	<property name="spellChecker">
-    		<bean id="spellChecker" class="com.tutorial.spring.hello.SpellChecker"/>
+    <bean id="javaCollection" class="com.tutorial.spring.hello.JavaCollection">
+    	<property name="addressList">
+    		<list>
+    			<value>India</value>
+    			<value>Japon</value>
+    			<value>Mexico</value>
+    			<value>Sur Corea</value>
+    			<value>Tailandia</value>
+    		</list>
     	</property>
+    	
+    	<property name="addressSet">
+    		<set>
+    			<value>India</value>
+    			<value>Japon</value>
+    			<value>Mexico</value>
+    			<value>Sur Corea</value>
+    			<value>Tailandia</value>
+    		</set>
+    	</property>
+    	
+    	<property name="addressMap">
+    		<map>
+    			<entry key="1" value="India"/>
+    			<entry key="2" value="Japon"/>
+    			<entry key="3" value="Mexico"/>
+    			<entry key="4" value="Sur Corea"/>
+    			<entry key="5" value="Tailandia"/>
+    		</map>
+    	</property>
+    	
+    	<property name="addressProp">
+    		<props>
+    			<prop key="one">India</prop>
+    			<prop key="two">Japon</prop>
+    			<prop key="three">Mexico</prop>
+    			<prop key="four">Sur Corea</prop>
+    			<prop key="five">Tailandia</prop>
+    		</props>
+    	</property>
+    	
     </bean>
     
  </beans>   

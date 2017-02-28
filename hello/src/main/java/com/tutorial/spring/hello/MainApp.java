@@ -13,8 +13,13 @@ public class MainApp
     {
     	AbstractApplicationContext context = new ClassPathXmlApplicationContext("Bean.xml");
     	
-    	TextEditor textEditor = (TextEditor)context.getBean("textEditor");
-    	textEditor.spellCheck();
+    	JavaCollection collections = (JavaCollection)context.getBean("javaCollection");
+    	
+    	collections.getAddressList();
+    	collections.getAddressSet();
+    	collections.getAddressMap();
+    	collections.getAddressProp();
+    	
     	
     	context.registerShutdownHook();
     	
